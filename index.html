@@ -20,7 +20,7 @@
 
     <!--Custom CSS Files-->
     <link rel="stylesheet" href="src/css/scroll.css" type="text/css">
-    <link rel="stylesheet" href="src/css/website.css" type="text/css">
+    <!--<link rel="stylesheet" href="src/css/website.css" type="text/css"-->
     <link rel="stylesheet" href="src/css/main.css" type="text/css">
     <link rel="stylesheet" href="src/css/nav.css" type="text/css">
     <link rel="stylesheet" href="src/css/home.css" type="text/css">
@@ -39,15 +39,18 @@
     <!-- Navigation Bar -->
     <nav id="mainNavbar" class="align-middle navbar navbar-dark navbar-expand-md fixed-top">
         
+        <!--Signature at the top Left-->
         <a href="#" class="navbar-brand">
             <img src="src/images/icon.png" width="30" height="30" class="d-inline-block align-top" alt="pageIcon">
             Rocky Kuang
         </a>
 
+        <!--Collapse Nav When Dimensions Shrink-->
         <button class = "navbar-toggler" data-toggle="collapse" data-target="#navLinks">
             <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!--NavBar Links-->
         <div id="navLinks" class = "collapse navbar-collapse">
             
             <!--Left Side Nav Bar-->
@@ -82,10 +85,19 @@
     </nav>
 
     <!--Home Page-->
-    <section id="home">
-        <img class="profileImage" src="https://media-exp1.licdn.com/dms/image/C5603AQG3LDuajVlL7Q/profile-displayphoto-shrink_200_200/0?e=1588204800&v=beta&t=elSwWdPlL6mf6rkUAhISg5V4fdQfN_TzD3MVdt_Wzdo ">        
-
-
+    <section class="home" id="home">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 d-flex ">
+                    <div class="profile">
+                        <img class="profileImage" src="https://media-exp1.licdn.com/dms/image/C5603AQG3LDuajVlL7Q/profile-displayphoto-shrink_200_200/0?e=1588204800&v=beta&t=elSwWdPlL6mf6rkUAhISg5V4fdQfN_TzD3MVdt_Wzdo ">
+                        <h1><strong>Rocky Kuang</strong></h1>
+                        <h3>Computer Science Student</h3>
+                        <h3>Ryerson University</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!--Java Script-->
