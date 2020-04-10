@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="src/css/scroll.css" type="text/css">
     <link rel="stylesheet" href="src/css/website.css" type="text/css">
     <link rel="stylesheet" href="src/css/main.css" type="text/css">
+    <link rel="stylesheet" href="src/css/nav.css" type="text/css">
+    <link rel="stylesheet" href="src/css/home.css" type="text/css">
+
 
     <!--Web Page Title-->
     <title>Rocky Kuang</title>
@@ -34,7 +37,7 @@
     <div class="arrow arrow-2"></div>
 
     <!-- Navigation Bar -->
-    <nav id="mainNavbar" class="navbar navbar-dark bg-dark navbar-expand-md">
+    <nav id="mainNavbar" class="align-middle navbar navbar-dark navbar-expand-md fixed-top">
         
         <a href="#" class="navbar-brand">
             <img src="src/images/icon.png" width="30" height="30" class="d-inline-block align-top" alt="pageIcon">
@@ -46,26 +49,44 @@
         </button>
 
         <div id="navLinks" class = "collapse navbar-collapse">
-            <ul class="navbar-nav">
+            
+            <!--Left Side Nav Bar-->
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="https://www.linkedin.com/in/rocky-kuang/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> Linkedin</a>
+                    <a class="nav-link" href="https://www.linkedin.com/in/rocky-kuang/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> Linkedin</a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://github.com/RockyLogic" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i> GitHub</a>
+                    <a class="nav-link" href="https://github.com/RockyLogic" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i> GitHub</a>
                 </li>
             </ul>
 
+            <!--Right Side Nav Bar-->
             <ul class="navbar-nav ml-auto">
-                <li class="navTabs"><a href="#home">Home</a></li>
-                <li class="navTabs"><a href="#about">About</a></li>
-                <li class="navTabs"><a href="#portfolio">Portfolio</a></li>
-                <li class="navTabs"><a href="#">Resume</a></li>
-                <li class="navTabs"><a href="#contact">Contact</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
             </ul>
         </div>
     </nav>
 
+    <!--Home Page-->
+    <section id="home">
+        <img class="profileImage" src="https://media-exp1.licdn.com/dms/image/C5603AQG3LDuajVlL7Q/profile-displayphoto-shrink_200_200/0?e=1588204800&v=beta&t=elSwWdPlL6mf6rkUAhISg5V4fdQfN_TzD3MVdt_Wzdo ">        
 
+
+    </section>
 
     <!--Java Script-->
     <!--1.jQuery, 2.Popper.js, 3.BootStrap JS-->

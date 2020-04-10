@@ -1,0 +1,17 @@
+#mainNavbar{
+    
+}
+#mainNavbar .navbar-brand{
+    color: white;
+    font-weight: 700;
+}
+
+#mainNavbar .nav-link{
+    color: rgb(134, 134, 134);
+}
+
+#mainNavbar .nav-link:hover{
+    color: white;
+    text-decoration: none;
+
+}
