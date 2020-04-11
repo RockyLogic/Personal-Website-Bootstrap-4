@@ -10,9 +10,11 @@
 #home h3{
     color: rgb(134, 134, 134);
 }
+
 .profile{
     margin:auto;
 }
+
 .profileImage {
     border-radius: 100px;
     height: 180px;
