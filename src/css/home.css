@@ -3,7 +3,7 @@
     width: 100%;
     height: 100vh;
     text-align: center;
-    
+    background: rgb(46, 35, 43);
     display: flex;
     align-items: center;
 }
