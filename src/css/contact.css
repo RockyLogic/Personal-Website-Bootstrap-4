@@ -12,6 +12,7 @@
 .contactLinks{
     color: rgb(134, 134, 134);
     text-decoration: none;
+    font-size: larger;
 }
 
 .contactLinks:hover{
