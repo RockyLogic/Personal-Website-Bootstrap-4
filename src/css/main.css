@@ -10,8 +10,9 @@ body{
 }
 
 .parallax{
+    background-image: url(../images/toronto.jpg);
     background-attachment: fixed;
-    background-position: center;
+    background-position: -70% 0%;
     background-repeat: no-repeat;
     background-size: cover;
 }

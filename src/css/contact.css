@@ -1,9 +1,8 @@
 .contact{
-    background-color:  rgb(34, 34, 34);
-    padding: 20px;
+    background-color:  rgb(46, 35, 43);;
     color: rgb(134, 134, 134);
     text-align: center;
-    font-size: 1rem;
+    font-size: 150%;
 }
 
 .contactLinks{
@@ -14,4 +13,11 @@
 .contactLinks:hover{
     color: rgb(199, 196, 196);
     text-decoration: none;
+}
+
+.contactImage{
+    margin-top: 10%;
+    height: 80vh;
+    border-radius: 100px;
+    object-fit: cover;
 }
