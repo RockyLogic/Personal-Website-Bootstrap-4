@@ -1,8 +1,12 @@
 .contact{
-    background-color:  rgb(46, 35, 43);;
+    background-color: white;
     color: rgb(134, 134, 134);
     text-align: center;
-    font-size: 150%;
+    font-size: 1.3rem;
+}
+
+#contact h1{
+    font-size: 2rem;
 }
 
 .contactLinks{
@@ -11,7 +15,7 @@
 }
 
 .contactLinks:hover{
-    color: rgb(199, 196, 196);
+    color: rgb(128, 3, 3);
     text-decoration: none;
 }
 
