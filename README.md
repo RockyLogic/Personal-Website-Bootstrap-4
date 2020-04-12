@@ -1,2 +1,2 @@
-# 📚Personal-Website
+# 📚Resume Webpage
 Personal Website made with CSS, HTML, BootStrap 3
