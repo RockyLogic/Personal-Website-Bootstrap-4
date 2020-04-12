@@ -39,8 +39,9 @@
 .projectDescription{
     height: 150px;
     width: 336px;
-    background-color: rgb(245, 245, 245);
-    padding: 10px 30px;
+    background-color: rgb(250, 250, 250);
+    padding: 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
