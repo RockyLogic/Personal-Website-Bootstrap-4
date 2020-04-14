@@ -42,9 +42,9 @@
     <nav id="mainNavbar" class="align-middle navbar navbar-dark navbar-expand-md fixed-top">
         
         <!--Signature at the top Left-->
-        <a href="#" class="navbar-brand">
+        <a id="mainNavbarBrand" href="#" class="navbar-brand">
             <img src="src/images/icon.png" width="30" height="30" class="align-middle" alt="pageIcon">
-            Rocky Kuang
+            <span id="mainNavbarBrandName">Rocky Kuang</span>
         </a>
 
         <!--Collapse Nav When Dimensions Shrink-->
@@ -58,10 +58,10 @@
             <!--Left Side Nav Bar-->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.linkedin.com/in/rocky-kuang/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> Linkedin</a>
+                    <a id="linkedinLink" class="nav-link" href="https://www.linkedin.com/in/rocky-kuang/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> Linkedin</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/RockyLogic" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i> GitHub</a>
+                    <a id="githubLink" class="nav-link" href="https://github.com/RockyLogic" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i> GitHub</a>
                 </li>
             </ul>
 
@@ -345,12 +345,29 @@
     <script>
         $(function(){
             $(document).scroll(function(){
+
+                //Defining Variables
                 var $nav = $("#mainNavbar");
-                $nav.toggleClass("scrolled", $(this).scrollTop() > 0);
-                $nav.toggleClass("unscrolled", $(this).scrollTop() < $nav.height());
+                var $home = $("#home");
+                var $linkedin = $("#linkedinLink");
+                var $github = $("#githubLink");
+                var $name = $("#mainNavbarBrandName");
+                
+                //Fades back to normal nav on home page
+                $nav.toggleClass("unscrolled", $(this).scrollTop() < $home.height()-$nav.height());
+
+                //Displays nav on scroll, removes some elements
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $home.height()-$nav.height());
+                $linkedin.toggleClass("disappear", $(this).scrollTop() > $home.height()-$nav.height());
+                $github.toggleClass("disappear", $(this).scrollTop() > $home.height()-$nav.height());
+                $name.toggleClass("changeRed", $(this).scrollTop() > $home.height()-$nav.height());
+
+                //Changes nav text color
+                $("#mainNavbar .nav-link").toggleClass("textColour", $(this).scrollTop() > $home.height()-$nav.height());
             });
         });
     </script>
+
 </body>
 
 </html>
