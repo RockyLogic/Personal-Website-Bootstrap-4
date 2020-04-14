@@ -1,8 +1,7 @@
 #mainNavbar{
-    
+    color: white;
 }
 #mainNavbar .navbar-brand{
-    color: white;
     font-weight: 700;
 }
 
@@ -14,4 +13,20 @@
     color: white;
     text-decoration: none;
 
+}
+
+.navbar.scrolled{
+    background: rgb(36, 27, 33, 0.95);
+    background: white;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid rgb(240, 240, 240);;
+    transition: padding 1000ms, background 1000ms, border 1000ms;
+}
+
+.navbar.unscrolled{
+    background: rgb(46, 35, 43);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    transition: padding 1000ms, background 1000ms;
 }
