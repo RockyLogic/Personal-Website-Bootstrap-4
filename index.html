@@ -358,9 +358,10 @@
 
                 //Displays nav on scroll, removes some elements
                 $nav.toggleClass("scrolled", $(this).scrollTop() > $home.height()-$nav.height());
+                $nav.toggleClass("navbar-light", $(this).scrollTop() > $home.height()-$nav.height());
                 $linkedin.toggleClass("disappear", $(this).scrollTop() > $home.height()-$nav.height());
                 $github.toggleClass("disappear", $(this).scrollTop() > $home.height()-$nav.height());
-                $name.toggleClass("changeRed", $(this).scrollTop() > $home.height()-$nav.height());
+                $name.toggleClass("changeBlack", $(this).scrollTop() > $home.height()-$nav.height());
 
                 //Changes nav text color
                 $("#mainNavbar .nav-link").toggleClass("textColour", $(this).scrollTop() > $home.height()-$nav.height());

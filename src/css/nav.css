@@ -14,6 +14,9 @@
     text-decoration: none;
 
 }
+.navbar-toggler {
+    border: none;
+}
 
 .navbar.scrolled{
     color:black;
@@ -35,8 +38,8 @@
     display: none;
 }
 
-.changeRed{
-    color:rgb(100, 100, 100);
+.changeBlack{
+    color:black;
 }
 
 #mainNavbar .textColour{
