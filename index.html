@@ -49,7 +49,7 @@
         </a>
 
         <!--Collapse Nav When Dimensions Shrink-->
-        <button class = "navbar-toggler" data-toggle="collapse" data-target="#navLinks">
+        <button class = "navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navLinks">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -315,20 +315,20 @@
                             <div>
                                 <i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i> 
                                 <a href="mailto:Rockykuang@hotmail.com" class="contactLinks">
-                                    Email<span class="d-none d-md-inline contactLinkDetail"><strong>: RockyKuang@hotmail.com</strong></span>
+                                    Email<span class="d-none d-lg-inline contactLinkDetail"><strong>: RockyKuang@hotmail.com</strong></span>
                                 </a>
                             </div>
                             <div>
                                 <i class="fa fa-linkedin-square fa-lg" aria-hidden="true "></i> 
                                 <a href="https://www.linkedin.com/in/rocky-kuang/ " target="_blank" class="contactLinks">
-                                    Linkedin<span class="d-none d-md-inline contactLinkDetail"><strong> - Rocky Kuang </strong></span>
+                                    Linkedin<span class="d-none d-lg-inline contactLinkDetail"><strong> - Rocky Kuang </strong></span>
                                 </a>
                             </div>  
                             <div>
                                 <i class="fa fa-github-square fa-lg" aria-hidden="true "></i> 
                                 <a href="https://github.com/RockyLogic " target="_blank" class="contactLinks">
                                     
-                                    GitHub<span class="d-none d-md-inline contactLinkDetail"><strong> - RKuangDev</strong></span>
+                                    GitHub<span class="d-none d-lg-inline contactLinkDetail"><strong> - RKuangDev</strong></span>
                                 </a>
                             </div>
                         </div>
@@ -352,6 +352,7 @@
 
     <script>
         $(function(){
+
                 //Defining Variables
                 var $nav = $("#mainNavbar");
                 var $home = $("#home");
@@ -359,21 +360,74 @@
                 var $github = $("#githubLink");
                 var $name = $("#mainNavbarBrandName");
 
+                //Collapses Nav Bar When Button Clicked
+                $('.navbar-nav>li>a').on('click', function(){
+                    $('.navbar-collapse').collapse('hide');
+                });
+
+
+                //on reload function
+                $(document).ready(function(){
+                    if($(window).scrollTop() < $home.height()-$nav.height()){
+                        $nav.addClass("unscrolled");
+                        $nav.addClass("navbar-dark");
+                        $linkedin.removeClass("disappear");
+                        $github.removeClass("disappear");
+                    } else{
+                        $nav.removeClass("unscrolled");
+                        $nav.removeClass("navbar-dark");
+                        $linkedin.addClass("disappear");
+                        $github.addClass("disappear");
+                    }
+                
+                    if($(window).scrollTop() > $home.height()-$nav.height()){
+                        $nav.addClass("scrolled");
+                        $nav.addClass("navbar-light");
+                        $linkedin.addClass("disappear");
+                        $github.addClass("disappear");
+                        $name.addClass("changeBlack");
+                        $("#mainNavbar .nav-link").addClass("textColour");
+            
+                    }else{
+                        $nav.removeClass("scrolled");
+                        $nav.removeClass("navbar-light");
+                        $linkedin.removeClass("disappear");
+                        $github.removeClass("disappear");
+                        $name.removeClass("changeBlack");
+                        $("#mainNavbar .nav-link").removeClass("textColour");
+                    }
+                });
+
                 //On scroll
                 $(document).scroll(function(){
 
-                    //Fades back to normal nav on home page
-                    $nav.toggleClass("unscrolled", $(this).scrollTop() < $home.height()-$nav.height());
-
-                    //Displays nav on scroll, removes some elements
-                    $nav.toggleClass("scrolled", $(this).scrollTop() > $home.height()-$nav.height());
-                    $nav.toggleClass("navbar-light", $(this).scrollTop() > $home.height()-$nav.height());
-                    $linkedin.toggleClass("disappear", $(this).scrollTop() > $home.height()-$nav.height());
-                    $github.toggleClass("disappear", $(this).scrollTop() > $home.height()-$nav.height());
-                    $name.toggleClass("changeBlack", $(this).scrollTop() > $home.height()-$nav.height());
-
-                    //Changes nav text color
-                    $("#mainNavbar .nav-link").toggleClass("textColour", $(this).scrollTop() > $home.height()-$nav.height());
+                    if($(window).scrollTop() < $home.height()-$nav.height()){
+                        $nav.addClass("unscrolled");
+                        $nav.addClass("navbar-dark");
+                        $linkedin.removeClass("disappear");
+                        $github.removeClass("disappear");
+                    } else{
+                        $nav.removeClass("unscrolled");
+                        $nav.removeClass("navbar-dark");
+                        $linkedin.addClass("disappear");
+                        $github.addClass("disappear");
+                    }
+                
+                    if($(window).scrollTop() > $home.height()-$nav.height()){
+                        $nav.addClass("scrolled");
+                        $nav.addClass("navbar-light");
+                        $linkedin.addClass("disappear");
+                        $github.addClass("disappear");
+                        $name.addClass("changeBlack");
+                        $("#mainNavbar .nav-link").addClass("textColour");
+                    }else{
+                        $nav.removeClass("scrolled");
+                        $nav.removeClass("navbar-light");
+                        $linkedin.removeClass("disappear");
+                        $github.removeClass("disappear");
+                        $name.removeClass("changeBlack");
+                        $("#mainNavbar .nav-link").removeClass("textColour");
+                    }
             });
         });
     </script>

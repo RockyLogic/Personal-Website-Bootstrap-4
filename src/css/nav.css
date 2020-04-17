@@ -2,6 +2,7 @@
     color: white;
 }
 #mainNavbar .navbar-brand{
+    color:white;
     font-weight: 700;
 }
 
@@ -40,6 +41,13 @@
 
 .changeBlack{
     color:black;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 #mainNavbar .textColour{
