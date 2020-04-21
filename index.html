@@ -361,14 +361,8 @@
                 var $github = $("#githubLink");
                 var $name = $("#mainNavbarBrandName");
 
-                //Collapses Nav Bar When Button Clicked
-                $('.navbar-nav>li>a').on('click', function(){
-                    $('.navbar-collapse').collapse('hide');
-                });
-
-
-                //on reload function
-                $(document).ready(function(){
+                //nav transformation function based on scroll position
+                function transformNav(){
                     if($(window).scrollTop() < $home.height()-$nav.height()){
                         $nav.addClass("unscrolled");
                         $nav.addClass("navbar-dark");
@@ -388,7 +382,6 @@
                         $github.addClass("disappear");
                         $name.addClass("changeBlack");
                         $("#mainNavbar .nav-link").addClass("textColour");
-            
                     }else{
                         $nav.removeClass("scrolled");
                         $nav.removeClass("navbar-light");
@@ -397,38 +390,21 @@
                         $name.removeClass("changeBlack");
                         $("#mainNavbar .nav-link").removeClass("textColour");
                     }
+                }
+
+                //on reload function
+                $(document).ready(function(){
+                    transformNav()
                 });
 
                 //On scroll
                 $(document).scroll(function(){
+                    transformNav()
 
-                    if($(window).scrollTop() < $home.height()-$nav.height()){
-                        $nav.addClass("unscrolled");
-                        $nav.addClass("navbar-dark");
-                        $linkedin.removeClass("disappear");
-                        $github.removeClass("disappear");
-                    } else{
-                        $nav.removeClass("unscrolled");
-                        $nav.removeClass("navbar-dark");
-                        $linkedin.addClass("disappear");
-                        $github.addClass("disappear");
-                    }
-                
-                    if($(window).scrollTop() > $home.height()-$nav.height()){
-                        $nav.addClass("scrolled");
-                        $nav.addClass("navbar-light");
-                        $linkedin.addClass("disappear");
-                        $github.addClass("disappear");
-                        $name.addClass("changeBlack");
-                        $("#mainNavbar .nav-link").addClass("textColour");
-                    }else{
-                        $nav.removeClass("scrolled");
-                        $nav.removeClass("navbar-light");
-                        $linkedin.removeClass("disappear");
-                        $github.removeClass("disappear");
-                        $name.removeClass("changeBlack");
-                        $("#mainNavbar .nav-link").removeClass("textColour");
-                    }
+                //Collapses Nav Bar When Button Clicked
+                $('.navbar-nav>li>a').on('click', function(){
+                    $('.navbar-collapse').collapse('hide');
+                });
             });
         });
     </script>
