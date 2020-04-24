@@ -44,7 +44,8 @@
 }
 
 .changeBlack{
-    color:rgb(46, 35, 43);
+    font-weight: bolder;
+    color:rgb(94, 19, 23);
 }
 
 .navbar-toggler:focus,
@@ -59,4 +60,6 @@
 }
 #mainNavbar .textColour:hover{
     color: rgb(128, 3, 3);
+    margin-bottom: -2px;
+    border-bottom: 2px solid;
 }
