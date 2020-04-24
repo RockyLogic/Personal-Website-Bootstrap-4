@@ -13,11 +13,15 @@
 #mainNavbar .nav-link:hover{
     color: white;
     text-decoration: none;
+}
+#mainNavbar .nav-item{
+    box-sizing: border-box;
+}
+#mainNavbar .nav-item:hover {
+    margin-bottom: -2px;
+    border-bottom: 2px solid;
+}
 
-}
-.navbar-toggler {
-    border: none;
-}
 
 .navbar.scrolled{
     color:black;
