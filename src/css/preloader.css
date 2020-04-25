@@ -2,13 +2,19 @@
 .preload-Wrapper{
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
+  z-index: 9999;
   top: 0;
   left: 0;
-  background-color: rgb(49, 49, 49);
+  background-color: rgb(28, 27, 27);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.preload-Wrapper.hidden{
+  animation: fadeOut .5s;
+  animation-fill-mode: forwards;
 }
 
 .loader {
@@ -16,7 +22,7 @@
   width: 30px;
   height: 30px;
   position: relative;
-  border: 4px solid #Fff;
+  border: 3px solid rgb(46, 35, 43);
   animation: loader 2s infinite ease;
 }
 
@@ -24,7 +30,7 @@
   vertical-align: top;
   display: inline-block;
   width: 100%;
-  background-color: #fff;
+  background-color: rgb(46, 35, 43);
   animation: loader-inner 2s infinite ease-in;
 }
 
@@ -69,5 +75,16 @@
   
   100% {
     height: 0%;
+  }
+}
+
+@keyframes fadeOut{
+  
+  75%{
+    opacity: 0.25;
+  }
+  100%{
+    opacity: 0;
+    visibility: hidden;
   }
 }

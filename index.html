@@ -332,9 +332,9 @@
     </footer>
 
     <!--Preloader-->
-    <!-- <div class="preload-Wrapper">
+    <div class="preload-Wrapper">
         <span class="loader"><span class="loader-inner"></span></span>
-    </div> -->
+    </div>
 
 
     <!--Java Script-->
@@ -348,9 +348,12 @@
 
         $(function(){
                 //Preloader Fade Out
-                // $(window).on("load",function(){
-                //     $(".preload-Wrapper").fadeOut("slow");
-                // });
+                $(window).on("load",function(){
+                    var loader = document.querySelector(".loader");
+                    loader.style.visibility = "hidden";
+                    var wrapper = document.querySelector(".preload-Wrapper");
+                    wrapper.className += " hidden";
+                });
 
                 //Defining Variables
                 var $nav = $("#mainNavbar");
