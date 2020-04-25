@@ -349,10 +349,13 @@
         $(function(){
                 //Preloader Fade Out
                 $(window).on("load",function(){
+                    
+                    setTimeout(function(){
                     var loader = document.querySelector(".loader");
                     loader.style.visibility = "hidden";
                     var wrapper = document.querySelector(".preload-Wrapper");
                     wrapper.className += " hidden";
+                    }, 2200);
                 });
 
                 //Defining Variables
