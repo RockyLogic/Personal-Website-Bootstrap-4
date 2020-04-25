@@ -25,7 +25,7 @@
 
 .navbar.scrolled{
     color:black;
-    background: rgb(255, 255, 255, 0.95);
+    background: rgb(255, 255, 255, .95);
     padding-top: 0px;
     padding-bottom: 0px;
     border-bottom: 1px solid rgb(240, 240, 240);;
@@ -44,7 +44,7 @@
 }
 
 .changeBlack{
-    color:rgb(94, 19, 23);
+    color:rgb(66, 66, 66);
 }
 
 .navbar-toggler:focus,
