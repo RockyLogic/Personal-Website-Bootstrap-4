@@ -57,9 +57,9 @@ $(function(){
     $(document).scroll(function(){
         transformNav()
 
-    //Collapses Nav Bar When Button Clicked
-    $('.navbar-nav>li>a').on('click', function(){
-        $('.navbar-collapse').collapse('hide');
+        //Collapses Nav Bar When Button Clicked
+        $('.navbar-nav>li>a').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
+        });
     });
-});
 });
