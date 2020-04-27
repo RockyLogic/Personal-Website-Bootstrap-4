@@ -3,6 +3,7 @@
     width: 100%;
     background-color: white;
     color: black;
+    
 }
 
 #about h1{
@@ -14,10 +15,7 @@
     height: 100vh;
     display: flex;
     align-items: center;
-}
-
-.aboutInfo{
-    height: 70vh;
+    justify-content: center;
 }
 
 .aboutTitle{
