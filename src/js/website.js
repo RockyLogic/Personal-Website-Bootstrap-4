@@ -3,6 +3,8 @@ $(function(){
     $(window).on("load",function(){
         
         setTimeout(function(){
+        var body = document.querySelector("body");
+        body.style.position = "relative";
         var loader = document.querySelector(".loader");
         loader.style.visibility = "hidden";
         var wrapper = document.querySelector(".preload-Wrapper");

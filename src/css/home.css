@@ -1,3 +1,7 @@
+body{
+    position: fixed;
+}
+
 .home{
     color: white;
     width: 100%;
