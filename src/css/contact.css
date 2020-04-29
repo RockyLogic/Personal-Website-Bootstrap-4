@@ -9,6 +9,10 @@
     font-size: 2rem;
 }
 
+#contact h5{
+    font-size: 1.2rem;
+}
+
 .contactLinks{
     color: rgb(134, 134, 134);
     text-decoration: none;
