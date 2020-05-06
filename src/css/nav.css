@@ -22,7 +22,9 @@
     border-bottom: 2px solid;
 }
 
-
+.mainNavbarBrandName{
+    padding-left: 7px;
+}
 .navbar.scrolled{
     color:black;
     background: rgb(255, 255, 255, .95);
@@ -37,14 +39,6 @@
     padding-top: 8px;
     padding-bottom: 8px;
     transition: all 500ms;
-}
-
-.disappear{
-    display: none;
-}
-
-.changeBlack{
-    color:rgb(66, 66, 66);
 }
 
 .navbar-toggler:focus,
