@@ -22,31 +22,23 @@ $(function(){
     //function based on scroll position -- nav transformation
     function transformNav(){
         if($(window).scrollTop() < $home.height()-$nav.height()){
+            $nav.removeClass("scrolled");
+            $nav.removeClass("navbar-light");
             $nav.addClass("unscrolled");
             $nav.addClass("navbar-dark");
-            $linkedin.removeClass("disappear");
-            $github.removeClass("disappear");
+            $linkedin.show();
+            $github.show();
+            $name.css("color", "white");
+            $("#mainNavbar .nav-link").removeClass("textColour");
         } else{
             $nav.removeClass("unscrolled");
             $nav.removeClass("navbar-dark");
-            $linkedin.addClass("disappear");
-            $github.addClass("disappear");
-        }
-    
-        if($(window).scrollTop() > $home.height()-$nav.height()){
             $nav.addClass("scrolled");
             $nav.addClass("navbar-light");
-            $linkedin.addClass("disappear");
-            $github.addClass("disappear");
-            $name.addClass("changeBlack");
+            $linkedin.hide();
+            $github.hide();
+            $name.css("color", "rgb(66, 66, 66)");
             $("#mainNavbar .nav-link").addClass("textColour");
-        }else{
-            $nav.removeClass("scrolled");
-            $nav.removeClass("navbar-light");
-            $linkedin.removeClass("disappear");
-            $github.removeClass("disappear");
-            $name.removeClass("changeBlack");
-            $("#mainNavbar .nav-link").removeClass("textColour");
         }
     }
 
