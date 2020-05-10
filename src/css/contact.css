@@ -25,10 +25,10 @@
 }
 
 .contactImage{
-    margin-top: 10%;
     height: 80vh;
     border-radius: 100px;
     object-fit: cover;
+    max-width: 100%;
 }
 
 .contactLinkDetail{
