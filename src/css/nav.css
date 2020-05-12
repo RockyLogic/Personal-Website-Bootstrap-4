@@ -8,11 +8,13 @@
 
 #mainNavbar .nav-link{
     color: rgb(134, 134, 134);
+    transition: all .4s;
 }
 
 #mainNavbar .nav-link:hover{
     color: white;
     text-decoration: none;
+    transition: all .4s;
 }
 #mainNavbar .nav-item{
     box-sizing: border-box;
@@ -30,8 +32,9 @@
     background: rgb(255, 255, 255, .95);
     padding-top: 0px;
     padding-bottom: 0px;
-    border-bottom: 1px solid rgb(240, 240, 240);;
-    transition: all 500ms;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    transition-property: background padding-top padding-bottom color;
+    transition: .4s;
 }
 
 .navbar.unscrolled{
@@ -50,9 +53,12 @@
 
 #mainNavbar .textColour{
     color: black;
+    transition: all .4s;
 }
+
 #mainNavbar .textColour:hover{
     color: rgb(128, 3, 3);
     margin-bottom: -2px;
     border-bottom: 2px solid;
+    transition: color .4s;
 }

@@ -33,7 +33,8 @@
     height: 80vh;
     border-radius: 100px;
     object-fit: cover;
-    max-width: 100%;
+    max-width: 95%;
+    max-height: 80%;
 }
 
 .contactLinkDetail{
